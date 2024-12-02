@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvanennkoLab04-3</title>
+    <style>
+        /* Стилі для контейнера, що містить смуги */
+        .marquee-container {
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .marquee {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /* Смуги з різними фоновими кольорами */
+        .row1 {
+            background-color: #FF6347;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .row2 {
+            background-color: #4682B4;
+            animation: moveUp 5s linear infinite;
+        }
+
+        .row3 {
+            background-color: #32CD32;
+            animation: moveDown 5s linear infinite;
+        }
+
+        .row4 {
+            background-color: #FFD700;
+            animation: moveLeftRight 5s ease-in-out infinite;
+        }
+
+        .row5 {
+            background-color: #8A2BE2;
+            animation: delayMove 6s ease-in-out infinite;
+        }
+
+        /* Коливання тексту та рисунків */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Пробігання знизу до гори */
+        @keyframes moveUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+
+        /* Пробігання згори до низу */
+        @keyframes moveDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        /* Переміщення тексту зліва направо */
+        @keyframes moveLeftRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+        }
+
+        /* Переміщення з різними запізненнями */
+        @keyframes delayMove {
+            0% { transform: translateY(-100%); }
+            50% { transform: translateY(50%); }
+            100% { transform: translateY(100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="row1">
+            <marquee direction="up" behavior="alternate" scrollamount="5">Текст та рисунки коливаються!</marquee>
+        </div>
+        <div class="row2">
+            <marquee direction="up" scrollamount="10">Послідовність рисунків пробігає знизу до гори та з’являється знову.</marquee>
+        </div>
+        <div class="row3">
+            <marquee direction="down" scrollamount="10">Послідовність рисунків пробігає згори до низу із зупинкою у границі області.</marquee>
+        </div>
+        <div class="row4">
+            <marquee direction="left" behavior="scroll" scrollamount="7">Текст з різними режимами запізнення!</marquee>
+        </div>
+        <div class="row5">
+            <marquee direction="right" scrollamount="4">Текст з різними режимами запізнення!</marquee>
+        </div>
+    </div>
+</body>
+</html>
