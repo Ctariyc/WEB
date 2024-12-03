@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmolyanskyiLab9</title>
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,/* Вставте закодоване зображення фону тут */');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin: 20px;
+            text-align: justify;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            color: #333399;
+            font-style: normal;
+        }
+
+        p {
+            text-indent: 20px;
+            margin: 10px 20px;
+            font-style: italic;
+        }
+
+        .left-img {
+            float: left;
+            margin: 10px 20px 10px 0;
+            width: 150px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            border: 1px solid transparent;
+        }
+
+        nav a:link {
+            color: #007BFF;
+        }
+
+        nav a:visited {
+            color: #4CAF50;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-color: #ccc;
+        }
+
+        nav a:active {
+            color: #FF5733;
+            border-color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+    <h1>Головна сторінка сайту</h1>
+    <p>Це перший абзац тексту на головній сторінці. Фон має зображення, а текст оформлений за стилями.</p>
+    <p><img src="data:image/jpeg;base64,/* Вставте закодоване зображення прикладу тут */" alt="Приклад зображення" class="left-img"> Абзац із зображенням зліва. Тут ви можете побачити, як зображення інтегрується в текст.</p>
+    <nav>
+        <a href="#page2">Сторінка 2</a> | 
+        <a href="#page3">Сторінка 3</a>
+    </nav>
+
+    <hr>
+    <h1 id="page2">Сторінка 2</h1>
+    <p>Це друга сторінка сайту. Усі сторінки мають однаковий стиль.</p>
+    <nav>
+        <a href="#top">Головна</a> | 
+        <a href="#page3">Сторінка 3</a>
+    </nav>
+
+    <hr>
+    <h1 id="page3">Сторінка 3</h1>
+    <p>Це третя сторінка сайту. Вона теж оформлена у відповідності до вимог завдання.</p>
+    <nav>
+        <a href="#top">Головна</a> | 
+        <a href="#page2">Сторінка 2</a>
+    </nav>
+</body>
+</html>
